@@ -1,5 +1,6 @@
 import './App.css';
 import Alert from './components/Alert';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import { useState } from 'react';
@@ -15,7 +16,7 @@ function App() {
     })
     setTimeout(() => {
       setAlert(null);
-    }, 1500);
+    }, 2000);
   }
 
   const toggleMode = () => {
@@ -37,6 +38,7 @@ function App() {
       <div className="container">
         <TextForm showAlert={showAlert} heading='Enter Text To Analyze' mode={mode} />
       </div>
+      <Footer mode={mode}/>
     </>
   );
 }

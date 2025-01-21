@@ -45,10 +45,10 @@ export default function TextForm(props) {
         setItalic(!isItalic);
         props.showAlert("Text Italic!", "success");
     };
+   
 
-
-    const [isBold, setBold] = useState('');
-    const [isItalic, setItalic] = useState('');
+    const [isBold, setBold] = useState();
+    const [isItalic, setItalic] = useState(true);
     const [text, setText] = useState('');
     return (
         <>

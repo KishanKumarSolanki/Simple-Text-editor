@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* LinkedIn Color */
+.btn-linkedin-light {
+  background-color: #0077b5;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-linkedin-dark {
+  background-color: #005582;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-linkedin-light:hover, .btn-linkedin-dark:hover {
+  background-color: #005582;
+  color: white;
+}
+
+/* GitHub Color */
+.btn-github-light {
+  background-color: #333;
+  color: white;
+}
+
+.btn-github-dark {
+  background-color: #000;
+  color: white;
+}
+
+.btn-github-light:hover, .btn-github-dark:hover {
+  background-color: #000;
+  color: white;
 }
