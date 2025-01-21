@@ -45,7 +45,22 @@ export default function TextForm(props) {
         setItalic(!isItalic);
         props.showAlert("Text Italic!", "success");
     };
-   
+    const handletitleClick = () => {
+        let newText = text.toLowerCase().split(' ').map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }).join(' ');
+        setText(newText);
+        props.showAlert("Converted to Titlecase!", "success");
+    }
+
+    const handleSentenceClick = () => {
+        let newText = text.trim();
+        newText = newText.toLowerCase();
+        newText = newText.charAt(0).toUpperCase() + newText.slice(1);
+        setText(newText);
+        props.showAlert("Converted to Sentence Case!", "success");
+    }
+
 
     const [isBold, setBold] = useState();
     const [isItalic, setItalic] = useState(true);
@@ -59,6 +74,8 @@ export default function TextForm(props) {
                 </div>
                 <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
                 <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Convert to Lowercase</button>
+                <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handletitleClick}>Convert to TitleCase</button>
+                <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleSentenceClick}>Convert to SentenceCase</button>
                 <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
                 <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleBold}>Text Bold</button>
                 <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleItalic}>Text Italic</button>
